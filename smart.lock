@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "instagram-wrapper": {}
+    },
+    "packages": {
+      "instagram-wrapper": {
+        "git": "https://github.com/bojan88/meteor-instagram-wrapper.git",
+        "tag": "v0.0.1",
+        "commit": "58955b290e838d942e15b9fbf663106abd59ba5e"
+      }
+    }
+  }
+}
