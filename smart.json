@@ -1,5 +1,8 @@
 {
   "packages": {
-    "instagram-wrapper": {}
+    "instagram-wrapper": {},
+    "iron-router": {},
+    "bootstrap-3": {},
+    "scss": {}
   }
 }

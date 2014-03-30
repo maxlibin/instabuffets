@@ -2,13 +2,36 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "instagram-wrapper": {}
+      "instagram-wrapper": {},
+      "iron-router": {},
+      "bootstrap-3": {},
+      "scss": {}
     },
     "packages": {
       "instagram-wrapper": {
         "git": "https://github.com/bojan88/meteor-instagram-wrapper.git",
         "tag": "v0.0.1",
         "commit": "58955b290e838d942e15b9fbf663106abd59ba5e"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.0",
+        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
+      },
+      "scss": {
+        "git": "https://github.com/fourseven/meteor-scss.git",
+        "tag": "v0.8.4",
+        "commit": "11af0da643944d241fe7d173af76162c4b670dee"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.2",
+        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
       }
     }
   }
