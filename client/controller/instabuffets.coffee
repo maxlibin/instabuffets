@@ -4,15 +4,16 @@ Meteor.call "instagram", (err, result)->
   Session.set('popouarImg', result)
 
 
-_getInstaTagImg = (_tags)->
+# _getInstaTagImg = (_tags)->
 
-  Meteor.call "popImages", _tags, (err, result)->
-    if(err)
-      throw err
-    Session.set('popouarImg', result)
+#   Meteor.call "popImages", _tags, (err, result)->
+#     if(err)
+#       throw err
+#     Session.set('popouarImg', result)
 
+console.log(Session.get 'popouarImg')
 
-Template.posts.helpers(
+Template.home.helpers(
   #  get the popular image and place on home page,
   get_instragram_photos: ->
     result = Session.get('popouarImg')

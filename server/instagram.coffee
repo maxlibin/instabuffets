@@ -2,6 +2,7 @@ Future = Npm.require 'fibers/future'
 Insta = new Instagram.createClient("", "")
 
 
+
 # getpopular_imgs = Meteor._wrapAsync(popular_imgs)
 # console.log(getpopular_imgs(Insta))
 
