@@ -4,8 +4,8 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-instagram-wrapper
 coffeescript
 iron-router
 bootstrap-3
 scss
+instagram-wrapper

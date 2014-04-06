@@ -6,9 +6,8 @@ Router.map ->
   this.route 'home',
     path: '/'
     template: "home"
-  return
 
-  this.route 'posts',
-    path: '/posts'
-    template: 'posts'
+  this.route 'product',
+    path: '/product/:_id'
+    template: "product"
   return

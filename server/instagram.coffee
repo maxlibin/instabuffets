@@ -1,7 +1,6 @@
 Future = Npm.require 'fibers/future'
-Insta = new Instagram.createClient("", "")
-
-
+Insta = new Instagram.createClient("97f1b15fd1d4410da6beb1808af21bdf", "94b4343094c24b139b3fbda61c72c5cf")
+_user = "maxlibin"
 
 # getpopular_imgs = Meteor._wrapAsync(popular_imgs)
 # console.log(getpopular_imgs(Insta))
@@ -20,14 +19,11 @@ Meteor.methods (
     _getInstaPop = getInstaPop.wait()
     return _getInstaPop
 
-  popImages: (_tags)->
-    
-    getInstaTagImg = new Future()
-    # get the popular images by tags
-    # ==============================
-    Insta.tags.media _tag, max_id: 5, (img, err) ->
-      getInstaTagImg.return img
+  myImg: ->
+    getId = new Future()
+    Insta.users.search(_user, (user, err)->
+      _uID = getId.return user
+    )
+    _id = getId.wait()[0].id
 
-    _getInstaTagImg = getInstaTagImg.wait()
-    return _getInstaTagImg
 )

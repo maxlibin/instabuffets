@@ -5,7 +5,9 @@
   <div class="clear"></div>
   <div class="col-lg-12 home--in--photos">
     {{#each get_instragram_photos}}
-      <img src="{{images.thumbnail.url}}" alt="" />
+      <a href="/product/{{id}}">
+        <img src="{{images.thumbnail.url}}" alt="" />
+      </a>
     {{/each}}
   </div>
 
