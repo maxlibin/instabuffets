@@ -21,9 +21,17 @@ Meteor.methods (
 
   myImg: ->
     getId = new Future()
+    getMyImg = new Future()
+
     Insta.users.search(_user, (user, err)->
-      _uID = getId.return user
+      getId.return user
     )
     _id = getId.wait()[0].id
 
+    
+    Insta.users.media(_id, count:15, (img, err, pagi)->
+      getMyImg.return img
+    )
+    _myImg = getMyImg.wait()
+    return _myImg
 )
