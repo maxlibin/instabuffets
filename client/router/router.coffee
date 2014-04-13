@@ -12,8 +12,6 @@ Router.map ->
     template: "product"
     data: ->
       _id =  this.params._id
-
-      console.log(_id)
-      return _id
+      return _id: _id
 
   return

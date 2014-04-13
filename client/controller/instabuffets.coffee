@@ -8,13 +8,6 @@ Meteor.call "myImg", (err, result)->
     throw err
   Session.set('getMyImg', result)
 
-# _getInstaTagImg = (_tags)->
-
-#   Meteor.call "popImages", _tags, (err, result)->
-#     if(err)
-#       throw err
-#     Session.set('popouarImg', result)
-
 Template.home.helpers(
   #  get the popular image and place on home page,
   get_instragram_photos: ->
@@ -22,12 +15,15 @@ Template.home.helpers(
     return result
 )
 
-
 Template.product.helpers(
   get_current_photo: ->
-    imgs_array = Session.get('getMyImg')
-    # $.inArray(this.params, imgs_array)
-    return this.params
+    Meteor.call "product", this._id, (err, result)->
+      if err
+        throw err
+      Session.set('currentPhoto', result)
+
+    _result = Session.get('currentPhoto');
+    return _result
 )
 
 

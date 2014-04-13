@@ -34,4 +34,13 @@ Meteor.methods (
     )
     _myImg = getMyImg.wait()
     return _myImg
+
+  
+  product:(_id)->
+    _getProduct = new Future()
+    Insta.media.id _id, (img, err)->
+      _getProduct.return img
+
+    _product = _getProduct.wait()
+    return _product
 )
